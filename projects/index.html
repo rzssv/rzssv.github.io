@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <title>rzssv's site</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png" />
+</head>
+
+<body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <button class="close" onclick="gotoTop();" id="topButton">
+        <img style="max-height: 20px;" src="../images/up-arrow.png">
+    </button>
+    <div id="mobile-nav">
+        <a>&gt; My Projects</a>
+        <a href="https://github.com/rzssv" target="_blank">My Github</a>
+        <button onclick="mobileNavClose();">
+            <img class="close" src="../images/close.png" />
+        </button>
+    </div>
+    <div id="settings">
+        <h2>Settings</h2>
+        <button style="float: right;" onclick="settingsClose();">
+            <img class="close" src="../images/close.png">
+        </button>
+        <br />
+        <br />
+        <label for="darkmode" style="line-height: 34px;">Dark Mode
+            <label class="switch">
+                <input id="darkmode" onclick="darkMode();" type="checkbox" />
+                <span class="slider"></span>
+            </label>
+        </label>
+    </div>
+    <header>
+        <nav>
+            <a href="/" style="font-size: 24px;"><b>rzssv</b></a>
+            <div style="float:right;">
+                <a id="desktop">&gt; My Projects</a>
+                <a href="https://github.com/rzssv" id="desktop" target="_blank">My Github</a>
+                <button onclick="settingsOpen();">
+                    <img class="close" src="../images/setting.png" />
+                </button>
+                <button id="hamburger" onclick="mobileNavOpen();">
+                    <img id="hamburger" src="../images/hamburger.png" />
+                </button>
+            </div>
+        </nav>
+        <h1 id="header">~ projects ~</h1>
+    </header>
+    <div class="slideshow-container">
+        <div class="slide slide-fade">
+            <div class="number"><p>1 / 3</p></div>
+            <img src="../images/DMarqet.png" style="max-width: 100%;" />
+            <div class="image-text"><p>An auction house I made that works similar to Kijiji. You can find it <a href="https://github.com/rzssv/DMarqet" style="text-decoration: underline;">here.</p></a> </div>
+        </div>
+        <div class="slide slide-fade">
+            <div class="number"><p>2 / 3</p></div>
+            <img src="../images/amazon-scam.png" style="max-width: 100%;" />
+            <div class="image-text"><p>An amazon phishing website I created using PHP<br /> (I didn't put it up for obvious reasons).</p></div>
+        </div>
+        <div class="slide slide-fade">
+            <div class="number"><p>3 / 3</p></div>
+            <img src="../images/chippawa.png" style="max-width: 100%;" />
+            <div class="image-text"><p>An older project I created for a history lesson. You can find it <a href="https://rzssv.github.io/chippawa/">here.</p></a></div>
+        </div>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1);"></span>
+            <span class="dot" onclick="currentSlide(2);"></span>
+            <span class="dot" onclick="currentSlide(3);"></span>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Made by <a href="https://github.com/rzssv" target="_blank">rzssv</a></p>
+        <p>|</p>
+        <p>&#10084;</p>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+
+</html>
