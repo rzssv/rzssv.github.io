@@ -342,7 +342,11 @@ main p {
 }
 
 .column:hover {
-    box-shadow: 0 0 12px  white;
+    box-shadow: 0 0 12px black;
+}
+
+.column.dark-mode:hover {
+    box-shadow: 0 0 12px white;
 }
 
 #about-me {
